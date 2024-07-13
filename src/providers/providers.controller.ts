@@ -12,12 +12,12 @@ export class ProvidersController {
     return this.providersService.create(createProviderDto);
   }
 
-  @Get()
+  @Get('all')
   findAll() {
     return this.providersService.findAll();
   }
 
-  @Get(':id')
+  @Get('id/:id')
   findOne(@Param('id') id: string) {
     return this.providersService.findOne(+id);
   }
